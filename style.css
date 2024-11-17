@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: Poppins;
+    font-family: Arial, sans-serif;
 }
 a{
     color: unset;
@@ -27,7 +27,7 @@ a{
     gap: 20px;
 }
 .listProduct .item{
-    background-color: #e6eee9;
+    background-color: #EDFAF1;
     padding: 20px;
     border-radius: 20px;
 }
@@ -158,7 +158,7 @@ a{
         height: 40vh;
     } 
     .detail .name{
-        font-size: x-large;
+        font-size: large;
         margin: 0;
 
     }
