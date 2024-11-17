@@ -12,12 +12,13 @@ body {
     align-items: center;
     background-color: #f5f5f5;
     padding: 20px;
+    height: 100vh;
 }
 
 .garden-container {
     width: 100%;
     max-width: 1200px;
-    height: auto;
+    height: 100%;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -135,6 +136,72 @@ body {
     font-size: 14px;
     color: #555;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    margin-top: 180px;
+    padding: 20px;
+}
+
+.bottom-nav .nav-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.bottom-nav .nav-item-2 img {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+/* Footer Icon Animation */
+.bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
+    transition: transform 0.3s ease;
+}
+
+.bottom-nav .nav-item img:hover, .bottom-nav .nav-item-2 img:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Animation for fading in slides */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Large Devices for bottom nav(max-width: 1024px) */
+@media (max-width: 1024px) {
+    .bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Medium Devices for bottom nav(max-width: 768px) */
+@media (max-width: 768px) {
+.bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
+    width: 50px;
+    height: 50px;
+}
+}
+
+/* Responsive Styles for iPhone SE bottom nav (320px wide) */
+@media (max-width: 375px) {
+    .bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
+        width: 40px; /* Smaller icon size */
+        height: 40px;
+    }
+}
+
+/* Small Mobile Devices bottom nav (max-width: 600px) */
+@media (max-width: 600px) {
+.bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
+    width: 40px;
+    height: 40px;
+}
 }
 
 @keyframes fadeIn {
