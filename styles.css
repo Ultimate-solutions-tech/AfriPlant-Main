@@ -438,11 +438,11 @@ header h2 {
     }
 
     .info-text h3 {
-        font-size: 18px; /* Smaller font size */
+        font-size: 20px; /* Smaller font size */
     }
 
     .info-text p {
-        font-size: 12px; /* Smaller font size */
+        font-size: 14px; /* Smaller font size */
     }
 
     .info-image img {
