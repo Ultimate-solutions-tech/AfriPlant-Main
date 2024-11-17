@@ -8,21 +8,17 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     background-color: #f0f0f0;
-    padding: 20px 10px;
-    min-height: 100vh; /* Ensures the body takes full height */
+    padding: 10px;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px; /* Prevents the container from becoming too wide on large screens */
-    height: auto;
+    width: 100%; /* Increased width for desktop view */
+    height: 100%;
     background-color: #fff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
 }
 
 header {
@@ -30,7 +26,6 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-left: 40px;
-    flex-wrap: wrap; /* Allows items to stack on small screens */
 }
 
 header p {
@@ -62,13 +57,12 @@ header h2 {
     padding: 12px;
     border-radius: 20px;
     border: 1px solid #ccc;
-    font-size: 16px; /* Slightly smaller font for smaller screens */
 }
 
 .info-banner {
     display: flex;
-    height: auto;
-    flex-direction: column; /* Stacks elements vertically on smaller screens */
+    height: 250px;
+    background: rgb(0,59,20);
     background: linear-gradient(90deg, rgba(0,59,20,1) 0%, rgba(0,59,20,1) 41%, rgba(0,176,59,1) 100%);
     border-radius: 15px;
     padding: 15px;
@@ -77,8 +71,8 @@ header h2 {
 
 .info-text {
     flex: 1;
-    align-content: center;
-    padding: 0 50px;
+   align-content: center;
+   padding: 0 50px;
 }
 
 .info-text h3 {
@@ -97,17 +91,86 @@ header h2 {
     width: 200px; /* Increased image size */
     height: 150px;
     border-radius: 10px;
-    padding-right: 50px;
+   padding-right: 50px;
 }
 
 .main-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
     margin-left: 30px;
 }
+
+.button {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    justify-items: center;
+}
+
+.button img {
+    width: 40px; /* Increased icon size */
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.button p {
+    font-size: 16px;
+    color: #333;
+}
+
+.ask-botanist {
+    display: flex;
+    align-items: center;
+    background-color: #EDFAF1;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 40px;
+    height: 200px;
+    justify-content: center;
+}
+
+.ask-botanist h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0a0202;
+}
+
+.ask-botanist p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.botanist-icon img {
+    width: 100px; /* Increased icon size */
+    height: 100px;
+    margin-left: 10px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.bottom-nav .nav-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.bottom-nav .nav-item-2 img {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+/* Responsive Styles */
 
 /* Small Mobile Devices (max-width: 600px) */
 @media (max-width: 600px) {
@@ -125,6 +188,7 @@ header h2 {
 
     .info-banner {
         flex-direction: column;
+        height: auto;
     }
 
     .info-text {
@@ -139,7 +203,7 @@ header h2 {
     }
 
     .main-buttons {
-        grid-template-columns: 1fr; /* Stacks buttons on mobile */
+        grid-template-columns: 1fr;
     }
 
     .button p {
@@ -272,69 +336,6 @@ header h2 {
     }
 }
 
-/* Extra Small Devices (max-width: 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding: 15px; /* Less padding for extra small devices */
-    }
-
-    header h2 {
-        font-size: 22px; /* Smaller header font size */
-    }
-
-    header p {
-        font-size: 12px; /* Smaller paragraph font size */
-    }
-
-    .info-banner {
-        flex-direction: column;
-        height: auto; /* Allow elements to stack vertically */
-    }
-
-    .info-text {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .info-image img {
-        width: 100%; /* Makes the image scale to the container */
-        height: auto;
-        padding-right: 0;
-    }
-
-    .main-buttons {
-        grid-template-columns: 1fr; /* Stacks buttons vertically */
-        margin-left: 0;
-    }
-
-    .button p {
-        font-size: 12px; /* Smaller button text */
-    }
-
-    .ask-botanist {
-        flex-direction: column;
-        padding: 15px; /* Less padding for smaller screens */
-    }
-
-    .ask-botanist h3 {
-        font-size: 18px; /* Smaller heading for Ask Botanist section */
-    }
-
-    .ask-botanist p {
-        font-size: 12px; /* Smaller paragraph text */
-    }
-
-    .botanist-icon img {
-        width: 60px; /* Smaller icon */
-        height: 60px;
-    }
-
-    .bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
-        width: 35px; /* Smaller footer icon */
-        height: 35px;
-    }
-}
-
 /* Slider Styles */
 .slider {
     position: relative;
@@ -384,7 +385,6 @@ header h2 {
 /* Footer Icon Animation */
 .bottom-nav .nav-item img, .bottom-nav .nav-item-2 img {
     transition: transform 0.3s ease;
-    cursor: pointer;
 }
 
 .bottom-nav .nav-item img:hover, .bottom-nav .nav-item-2 img:hover {
@@ -409,3 +409,6 @@ header h2 {
 .ask-botanist:hover {
     transform: scale(1.05);
 }
+
+
+/* Garden css */
