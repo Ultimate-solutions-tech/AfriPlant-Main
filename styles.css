@@ -424,7 +424,12 @@ header h2 {
     }
 
     header p {
-        font-size: 12px; /* Adjusted font size */
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .profile-icon img {
+        width: 30px; /* Adjusted icon size */
+        height: 30px;
     }
 
     .info-banner {
@@ -458,6 +463,7 @@ header h2 {
     .ask-botanist {
         flex-direction: column;
         padding: 10px;
+        margin: 5px;
     }
 
     .ask-botanist h3 {
