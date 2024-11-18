@@ -192,6 +192,73 @@ a {
     text-decoration: none;
 }
 
+/* Bottom Nav Hover and Active State */
+.bottom-nav .nav-item {
+    transition: background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 10px; /* Add some rounding for a better effect */
+}
+
+.bottom-nav .nav-item:hover, 
+.bottom-nav .nav-item.active {
+    background-color: #4CAF50; /* Green color for hover and active state */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+    }
+
+    .profile-icon {
+        margin: 10px 0;
+    }
+
+    .info-banner {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .info-text, .info-image img {
+        padding: 0;
+    }
+
+    .main-buttons {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .ask-botanist {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        margin: 20px;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 20px;
+        top: 0;
+    }
+}
+
+
 
 /* Slider Styles */
 .slider {
