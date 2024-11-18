@@ -261,13 +261,13 @@ a {
     }
     .main-buttons {
         grid-template-columns: 1fr 1fr;
-        gap: 5px;
+        gap: 10px;
         position: relative;
         right: 30px;
         margin-right: 5px;
     }
     .button {
-        width: 158px;
+        width: 150px;
         gap: 5px;
         padding: 0 auto;
     }
