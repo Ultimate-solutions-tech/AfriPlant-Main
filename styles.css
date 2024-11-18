@@ -185,6 +185,7 @@ header h2 {
     height: 100px;
     margin-left: 10px;
     position: relative;
+    right: 3px;
     bottom: 50px;
 }
 
