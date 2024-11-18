@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="preloader">
+    </div>
     <div class="container">
         <!-- Header -->
         <header>
@@ -169,6 +171,17 @@
                 }
             });
         });
+    </script>
+
+
+    <script>
+
+        let loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+
     </script>
 </body>
 </html>
