@@ -79,7 +79,7 @@
             </div>
             <div class="button">
                 <p>My Garden</p>
-                <a href="garden.html">
+                <a href="other_page/garden.html">
                     <img src="images/my-garden.png" alt="My Garden">
                 </a>
             </div>
@@ -108,28 +108,28 @@
         <footer class="bottom-nav">
             <div class="nav-item">
                 <a href="index.html">
-                    <img src="images/homepage.png" alt="">
+                    <img src="images/home-active.png" alt="">
                     <h4>Home</h4>
                 </a>
             </div>
             <div class="nav-item">
                 <a href="https://afriplant-identifier.vercel.app/">
-                    <img src="images/diagnosepage.png" alt="">
+                    <img src="images/diagnose-active.png" alt="">
                     <h4>Diagnose</h4>
                 </a>
             </div>
             <div class="nav-item-scan">
-                <img src="images/Scan-camera.png" alt="">
+                <a href="https:afriplant-identifier.vercel.app"><img src="images/Scan-camera.png" alt=""></a>
             </div>
             <div class="nav-item">
                 <a href="https://afriplant-identifier.vercel.app/">
-                    <img src="images/librarypage.png" alt="">
+                    <img src="images/library-active.png" alt="">
                     <h4>Library</h4>
                 </a>
             </div>
             <div class="nav-item">
                 <a href="https://afriplant-identifierr.vercel.app/">
-                    <img src="images/botanistpage.png" alt="">
+                    <img src="images/botanist-active.png" alt="">
                     <h4>Botanist</h4>
                 </a>
             </div>
@@ -163,7 +163,7 @@
         });
 
         // Add onclick to main buttons
-        document.querySelectorAll('.main-buttons .button').forEach(button => {
+        document.querySelectorAll('.main-buttons .button .ask-botanist .bottom-nav').forEach(button => {
             button.addEventListener('click', () => {
                 const link = button.querySelector('a');
                 if (link) {
