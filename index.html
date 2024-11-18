@@ -10,6 +10,113 @@
 <body>
     <div id="preloader">
     </div>
+
+    <!-- onboarding -->
+    <div id="onboarding-container" class="onboarding">
+        <!-- Navigation Indicator -->
+    
+        <!-- Onboarding Steps -->
+        <div class="onboarding-step active" data-step="1" style="padding-top: 150px;">
+            <img src="images/Scan-camera.png" alt="Welcome Screen">
+            <div class="content">
+                <p>Welcome to</p>
+                <h1>AfriPlant Identifier</h1>
+                <p>Your companion for identifying plants, diagnosing diseases, and providing care tips.</p>
+                <button class="next-btn">Get Started</button>
+            </div>
+
+            <div id="onboarding-indicator" class="indicator">
+                <span class="indicator-dot active"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+            </div>
+        </div>
+    
+        <!-- Step 2 -->
+        <div class="onboarding-step" data-step="2"
+             style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/corn.png) no-repeat; background-size: cover; padding-top: 105px;">
+            <img src="images/finger-print-scan-1.png" style="width: 150px; height: 150px;" alt="Identify Plants Instantly">
+            <div class="content">
+                <h1>Identify Any Plant Instantly</h1>
+                <p>Simply scan a plant with your camera, and get instant identification and care tips.</p>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <div id="onboarding-indicator" class="indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot active"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+            </div>
+        </div>
+    
+        <!-- Step 3 -->
+        <div class="onboarding-step" data-step="3"
+             style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/leaf.png) no-repeat; background-size: cover; padding-top: 105px;">
+            <img src="images/finger-print-scan-1.png" style="width: 150px; height: 150px;" alt="Care Tips">
+            <div class="content">
+                <h1>Care for Your Plants</h1>
+                <p>Get personalized plant care tips to help your plants thrive and stay healthy.</p>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <div id="onboarding-indicator" class="indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot active"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+            </div>
+        </div>
+    
+        <!-- Step 4 -->
+        <div class="onboarding-step" data-step="4"
+             style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/tomato.png) no-repeat; background-size: cover; padding-top: 105px;">
+            <img src="images/user-settings.png" style="width: 150px; height: 150px;" alt="Diagnose Diseases">
+            <div class="content">
+                <h1>Diagnose Plant Diseases</h1>
+                <p>Identify and address plant diseases with AI-powered diagnosis tools.</p>
+                <button class="next-btn">Next</button>
+            </div>
+
+            <div id="onboarding-indicator" class="indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot active"></span>
+                <span class="indicator-dot"></span>
+            </div>
+        </div>
+    
+        <!-- Step 5 -->
+        <div class="onboarding-step" data-step="5"
+             style="background: rgb(52,121,44);
+                background: linear-gradient(90deg, rgba(52,121,44,1) 24%, rgba(153,99,32,1) 60%, rgba(119,121,54,1) 100%, rgba(110,115,51,1) 100%); padding-top: 50px;">
+            <h1>Snap Tips</h1>
+            <img src="images/good.png" style="width: auto; height: auto;" alt="Discover Africa's Flora">
+            <div class="icon" style="display: flex; flex-direction: row; justify-content: center; gap: 30px;">
+                <img src="images/too-close-1.png" style="width: auto; height: auto;" alt="Discover Africa's Flora">
+                <img src="images/too-far.png" style="width: auto; height: auto;" alt="Discover Africa's Flora">
+                <img src="images/multi.png" style="width: auto; height: auto;" alt="Discover Africa's Flora">
+            </div>
+            <div class="content">
+                <button class="finish-btn" style="margin-top: 20px;">Start Identifying your Plant</button>
+            </div>
+
+            <div id="onboarding-indicator" class="indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot"></span>
+                <span class="indicator-dot active"></span>
+            </div>
+        </div>
+    </div>
+      
+
     <div class="container">
         <!-- Header -->
         <header>
@@ -181,6 +288,39 @@
         window.addEventListener("load", function(){
             loader.style.display = "none";
         })
+
+
+
+        // onboarding
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".onboarding-step");
+    const dots = document.querySelectorAll(".indicator-dot");
+    const nextButtons = document.querySelectorAll(".next-btn, .finish-btn");
+    let currentStep = 0;
+
+    function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+            step.classList.toggle("active", index === stepIndex);
+        });
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === stepIndex);
+        });
+    }
+
+    nextButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+    });
+
+    showStep(currentStep); // Initialize the first step
+});
+
+
 
     </script>
 </body>
