@@ -185,6 +185,14 @@ a {
     transform: scale(1.1); /* Zoom effect */
 }
 
+#preloader {
+    background: #fff url(images/preloader.png) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
 /* Animation for fading in slides */
 @keyframes fadeIn {
     from { opacity: 0; }

@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="garden.css">
 </head>
 <body>
+    <div id="preloader">
+    </div>
 
+    
 <div class="garden-container">
     <h1>My Garden</h1>
 
@@ -236,6 +239,19 @@
             collapse.classList.add('show');
         }
     }
+</script>
+
+<script>
+
+let loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+
+    setTimeout(function() {
+loader.style.display = "none";
+}, 5000); // 5000 milliseconds = 5 seconds
+})
 </script>
 </body>
 </html>
