@@ -264,12 +264,12 @@ a {
         gap: 5px;
         position: relative;
         right: 30px;
+        margin-right: 5px;
     }
     .button {
         width: 158px;
         gap: 5px;
-        padding: auto;
-        margin: auto;
+        padding: 0 auto;
     }
     .button img {
         width: 40px;
