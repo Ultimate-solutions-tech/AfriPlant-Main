@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #f0f0f0;
-    padding: 10px;
+    height: 100vh;
 }
 
 .container {
@@ -166,8 +166,8 @@ header h2 {
     border-top: 1px solid #ddd;
     margin-top: 120px;
     padding-top: 10px;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    top: 60px;
 }
 
 .bottom-nav .nav-item img {
