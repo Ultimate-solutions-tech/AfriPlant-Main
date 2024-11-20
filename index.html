@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriPlant Identifier</title>
+    <title>Responsive Layout</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
     <div id="preloader">
     </div>  
 
-    <div class="container">
+    <!-- Main Container -->
+    <div class="container bg-white rounded-2xl shadow-lg p-8 md:p-16">
         <!-- Header -->
-        <header>
+        <header class="flex justify-between items-center mb-6">
             <div>
-                <p>Hi</p>
-                <h2>Welcome Back</h2>
+                <p class="text-sm text-gray-600 md:text-base">Hi</p>
+                <h2 class="text-3xl font-bold text-gray-800 md:text-4xl">Welcome Back</h2>
             </div>
-            <div class="profile-icon">
-                <img src="images/user-settings-02.png" alt="Profile Icon">
+            <div class="w-16 h-16 rounded-full bg-green-50 flex justify-center items-center overflow-hidden md:w-20 md:h-20">
+                <img src="images/header.png" alt="Profile" class="w-full h-full object-cover">
             </div>
         </header>
 
         <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search for Plants">
+        <div class="search-bar mb-8">
+            <input
+                type="text"
+                placeholder="Search..."
+                class="w-full px-4 py-3 border rounded-full text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
         </div>
 
+        <!-- Info Banner -->
         <!-- How to Use Section (Slider) -->
         <div class="info-banner">
             <div class="slider">
@@ -65,76 +72,70 @@
                 <span class="dot" onclick="showSlide(2)"></span>
             </div>
         </div>
-
+        
         <!-- Main Buttons -->
-        <div class="main-buttons">
-            <div class="button">
-                <p>Plant Identifier</p>
-                <a href="https://afriplant-identifier.vercel.app/">
-                    <img src="images/plant-identifier.png" alt="Plant Identifier">
-                </a>
+        <div class="main-buttons grid grid-cols-2 gap-4 mb-8">
+            <div class="button bg-gray-100 rounded-lg p-4 flex flex-row items-center hover:shadow-md transition justify-center gap-10"
+                 onclick="window.location.href='https://afriplant-identifier.vercel.app/'">
+                <p class="text-gray-800 font-bold text-sm md:text-base">Plant Identifier</p>
+                <a href="https://afriplant-identifier.vercel.app/"><img src="images/plant-identifier.png" alt="Icon 1" class="w-12 h-12 mb-2"></a>
             </div>
-            <div class="button">
-                <p>Plant Diagnose</p>
-                <a href="https://afriplant-identifier.vercel.app/">
-                    <img src="images/plant-diagnose.png" alt="Plant Diagnose">
-                </a>
+            <div class="button bg-gray-100 rounded-lg p-4 flex flex-row items-center hover:shadow-md transition justify-center gap-10"
+                 onclick="window.location.href='https://afriplant-identifier.vercel.app/'">
+                <p class="text-gray-800 font-bold text-sm md:text-base">Plant Diagnose</p>
+                <a href="https://afriplant-identifier.vercel.app/"><img src="images/plant-diagnose.png" alt="Icon 2" class="w-12 h-12 mb-2 "></a>
             </div>
-            <div class="button">
-                <p>My Garden</p>
-                <a href="other_page/garden.html">
-                    <img src="images/my-garden.png" alt="My Garden">
-                </a>
+            <div class="button bg-gray-100 rounded-lg p-4 flex flex-row items-center hover:shadow-md transition justify-center gap-10"
+                 onclick="window.location.href='other_page/garden.html'">
+                <p class="text-gray-800 font-bold text-sm md:text-base">My Garden</p>
+                <a href="other_page/garden.html"><img src="images/my-garden.png" alt="Icon 3" class="w-12 h-12 mb-2"></a>
             </div>
-            <div class="button">
-                <p>Stores & Vendors</p>
-                <a href="store_product.html">
-                    <img src="images/stores-vendor.png" alt="Stores & Vendors">
-                </a>
+            <div class="button bg-gray-100 rounded-lg p-3 flex flex-row items-center hover:shadow-md transition justify-center gap-8"
+                 onclick="window.location.href='store_product.html'">
+                <p class="text-gray-800 font-bold text-sm md:text-base">Stores & Vendors</p>
+                <a href="store_product.html"><img src="images/stores-vendor.png" alt="Icon 4" class="w-12 h-12 mb-2"></a>
             </div>
         </div>
-
+        
         <!-- Ask a Botanist Section -->
-        <div class="ask-botanist">
-            <div class="botanist-text">
-                <h3>Ask a Botanist</h3>
-                <p>Our AI-powered Botanist is ready to assist you on any plant-related problem.</p>
+        <div class="ask-botanist bg-green-50 rounded-lg p-6 flex items-center justify-between hover:shadow-md transition"
+        onclick="window.location.href='https://afriplaant-identifierr.vercel.app/'">
+            <div>
+                <h3 class="text-xl font-bold text-gray-800">Ask a Botanist</h3>
+                <p class="text-sm text-gray-600 mt-1">Our AI powered Botanist is ready to assist you on any plant-related problems</p>
             </div>
-            <div class="botanist-icon">
-                <a href="https://afriplaant-identifierr.vercel.app/">
-                    <img src="images/user-settings-02.png" alt="Botanist Icon">
-                </a>
-            </div>
+            <a href="https://afriplaant-identifierr.vercel.app/"><img src="images/user-settings-02.png" alt="Botanist" class="w-16 h-16 rounded-full md:w-24 md:h-24"></a>
         </div>
 
         <!-- Bottom Navigation -->
-        <footer class="bottom-nav">
-            <div class="nav-item">
-                <a href="https://afriplantt-identifier.vercel.app/">
-                    <img src="images/home-active.png" alt="">
-                    <h4>Home</h4>
-                </a>
+        <div class="bottom-nav flex justify-around items-center mt-8 pt-4 border-t">
+            <div class="nav-item text-center">
+                <a href="https://afriplantt-identifier.vercel.app/"><img src="images/home-active.png" alt="Nav Icon 1" class="w-8 h-8 hover:scale-110 transition"> 
+                    <h4 class="text-sm text-green-700 mt-1">Home</h4></a>
+                
             </div>
-            <div class="nav-item">
+            <div class="nav-item text-center">
                 <a href="https://afriplant-identifier.vercel.app/">
-                    <img src="images/diagnose-active.png" alt="">
-                    <h4>Diagnose</h4>
+                    <img src="images/diagnose-active.png" alt="Nav Icon 2" class="w-8 h-8 hover:scale-110 transition">
+                <h4 class="text-sm text-green-700 mt-1">Diagnose</h4>
                 </a>
             </div>
-            <div class="nav-item-scan">
-                <a href="https://afriplant-identifier.vercel.app/"><img src="images/Scan-camera.png" alt=""></a>
+            <div class="nav-item-scan text-center">
+                <a href="https://afriplant-identifier.vercel.app/">
+                    <img src="images/Scan-camera.png" alt="Scan" class="w-16 h-16 hover:scale-110 transition relative bottom-10">
+                </a> 
             </div>
-            <div class="nav-item">
-                    <img src="images/library-active.png" alt="">
-                    <h4>Library</h4>
+            <div class="nav-item text-center">
+                <a href="#"><img src="images/library-active.png" alt="Nav Icon 3" class="w-8 h-8 hover:scale-110 transition">
+                <h4 class="text-sm text-green-700 mt-1">Library</h4>
+            </a>
             </div>
-            <div class="nav-item">
-                <a href="https://afriplaant-identifierr.vercel.app/">
-                    <img src="images/botanist-active.png" alt="">
-                    <h4>Botanist</h4>
+            <div class="nav-item text-center">
+                <a href="https://afriplaant-identifierr.vercel.app/"><img src="images/botanist-active.png" alt="Nav Icon 3" class="w-8 h-8 hover:scale-110 transition">
+                <h4 class="text-sm text-green-700 mt-1">Botanist</h4>
                 </a>
             </div>
-        </footer>
+        </div>
     </div>
 
     <script>
@@ -174,20 +175,20 @@
         });
     </script>
 
+<script>
 
-    <script>
+    let loader = document.getElementById("preloader");
 
-        let loader = document.getElementById("preloader");
-
-        window.addEventListener("load", function(){
-            loader.style.display = "none";
-
-            setTimeout(function() {
+    window.addEventListener("load", function(){
         loader.style.display = "none";
-    }, 10000); // 5000 milliseconds = 5 seconds
-        })
+
+        setTimeout(function() {
+    loader.style.display = "none";
+}, 10000); // 5000 milliseconds = 5 seconds
+    })
 
 
-    </script>
+</script>
+
 </body>
 </html>
